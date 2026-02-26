@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery | Interactive Gallery Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="gallery.css">
+</head>
+
+<body>
+    <header class="gallery-header">
+        <div class="header-content">
+            <h1>Image Gallery</h1>
+            <p>Interactive gallery with search, filter, and slideshow features</p>
+        </div>
+    </header>
+
+    <main class="gallery-main">
+        <div class="gallery-container">
+            <!-- Search and Filter Controls -->
+            <div class="gallery-controls">
+                <div class="search-wrapper">
+                    <input type="text" class="search-box" id="searchInput"
+                        placeholder="🔍 Search images by title or description...">
+                </div>
+
+                <div class="filter-wrapper">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="nature">🌿 Nature</button>
+                    <button class="filter-btn" data-filter="city">🏙️ City</button>
+                    <button class="filter-btn" data-filter="tech">💻 Technology</button>
+                    <button class="filter-btn" data-filter="animals">🦁 Animals</button>
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid" id="galleryGrid"></div>
+
+            <!-- Slideshow Controls -->
+            <div class="slideshow-controls">
+                <button class="slideshow-btn" id="startSlideshow">▶ Start Slideshow</button>
+                <button class="slideshow-btn" id="stopSlideshow" disabled>⏹ Stop Slideshow</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="closeLightbox">×</button>
+            <div class="lightbox-nav prev" id="prevImage">‹</div>
+            <img src="" alt="" id="lightboxImage">
+            <div class="lightbox-nav next" id="nextImage">›</div>
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+    </div>
+
+    <footer class="gallery-footer">
+        <p>Created by Sama Mohamed | Image Gallery Project</p>
+        <p class="footer-note">Double-click anywhere to close lightbox | Arrow keys to navigate</p>
+    </footer>
+
+    <script src="gallery.js"></script>
+</body>
+
+</html>
